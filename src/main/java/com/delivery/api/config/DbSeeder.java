@@ -1,6 +1,7 @@
 package com.delivery.api.config;
 
 import com.delivery.api.entidade.PizzaAdicionais;
+import com.delivery.api.entidade.PizzaSabor;
 import com.delivery.api.entidade.PizzaTipo;
 import com.delivery.api.repository.PizzaAdicionaisRepository;
 import com.delivery.api.repository.PizzaSaborRepository;

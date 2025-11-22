@@ -9,24 +9,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 @Builder
-@Document(collection = "pizza_tipos")
-public class PizzaTipo {
+@Document(collection = "pizza_sabores")
+public class PizzaSabor {
 
     @Id
     private String id;
     private String nome;
     private String descricao;
-    private double precoBase;
+    private double preco;
     private String imagemUrl;
-
-    private List<PizzaSabor> pizzaSabores;
-
-    private List<PizzaAdicionais> adiocionaisPizzas;
-
-    private List<PizzaBorda> pizzaBordas;
-
+    private List<PizzaTipo> pizzaTipos;
 }
