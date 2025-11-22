@@ -1,9 +1,6 @@
 package com.delivery.api.dto;
 
-import com.delivery.api.entidade.PizzaSabor;
 import com.delivery.api.entidade.PizzaTipo;
-
-import java.util.List;
 
 public record ListarTiposDTO(
         String id,

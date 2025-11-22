@@ -1,5 +1,6 @@
 package com.delivery.api.service;
 
+import com.delivery.api.dto.ListarAdicionaisDTO;
 import com.delivery.api.dto.ListarSaboresDTO;
 import com.delivery.api.dto.ListarTiposDTO;
 import com.delivery.api.entidade.PizzaTipo;
@@ -30,4 +31,11 @@ public class MenuService {
     }
 
 
+    public List<ListarAdicionaisDTO> listarAdicionaisPorTipo(String tipoId) {
+        PizzaTipo tipo = repository.findById(tipoId).orElseThrow(() -> new RuntimeException("Tipo de pizza não encontrado: " + tipoId));
+
+        List<ListarAdicionaisDTO> listarAdicionaisDTOS = tipo.getAdiocionaisPizzas().stream().map(ListarAdicionaisDTO::new).collect(Collectors.toList());
+
+        return listarAdicionaisDTOS;
+    }
 }

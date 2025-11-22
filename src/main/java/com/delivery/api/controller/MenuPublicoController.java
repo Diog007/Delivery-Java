@@ -1,5 +1,6 @@
 package com.delivery.api.controller;
 
+import com.delivery.api.dto.ListarAdicionaisDTO;
 import com.delivery.api.dto.ListarSaboresDTO;
 import com.delivery.api.dto.ListarTiposDTO;
 import com.delivery.api.service.MenuService;
@@ -27,6 +28,12 @@ public class MenuPublicoController {
     public ResponseEntity<List<ListarSaboresDTO>> listarSaboresPorTipo(@PathVariable String tipoId) {
         List<ListarSaboresDTO> listarSaboresDTOS = menuService.listarSaboresPorTipo(tipoId);
         return ResponseEntity.ok(listarSaboresDTOS);
+    }
+
+    @GetMapping("/adicionais/{tipoId}")
+    public ResponseEntity<List<ListarAdicionaisDTO>> listarAdicionaisPorTipo(@PathVariable String tipoId) {
+        List<ListarAdicionaisDTO> listarAdicionaisDTOS = menuService.listarAdicionaisPorTipo(tipoId);
+        return ResponseEntity.ok(listarAdicionaisDTOS);
     }
 
 

@@ -25,4 +25,6 @@ public class PizzaTipo {
 
     private List<PizzaSabor> pizzaSabores;
 
+    private List<PizzaAdicionais> adiocionaisPizzas;
+
 }
